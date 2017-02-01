@@ -1,6 +1,4 @@
-# cookiecutter-laboite
-Cookiecutter template to create an app for La Boîte
-=======
+# Cookiecutter template to create an app for La Boîte
 
 You can use [cookiecutter](https://cookiecutter.readthedocs.io/) to help you
 create a minimalist scaffolding for your own app. Cookiecutter must be installed, if not use:
@@ -42,6 +40,18 @@ class AppMotD(App):
         verbose_name_plural = _("Configurations : Message of the Day")
 ```
 
+### Install your app
+
+From the directory of your app, where `setup.py` resides run:
+
+```shell
+python setup.py install
+```
+or
+```shell
+pip install -e .
+```
+
 ### Add your new app to the settings
 
 Edit the `laboite/settings.py` file, and add your app name to the list of existing `INSTALLED_APPS`:
@@ -68,12 +78,12 @@ LABOITE_APPS = [
 
 ### Add your app urls to laboite.urls
 
-Edit `boite.urls` file and add the path to your app urls in `urlpattern`:
+Edit `boite.urls` file and add the path to your app urls in `urlpatterns`:
 
-```python:
+```python
 urlpatterns = [
     ...
-    
+
     url(r"^(?P<boite_pk>\d+)/apps/motd/", include('laboite.apps.motd.urls', namespace="app_motd")), ## <---- here it is!
     url(r"^(?P<boite_pk>\d+)/apps/traffic/", include('laboite.apps.traffic.urls', namespace="app_traffic")),
     url(r"^(?P<boite_pk>\d+)/apps/weather/", include('laboite.apps.weather.urls', namespace="app_weather")),
@@ -95,7 +105,7 @@ usually smart enough to create this migration for you!
 
 ### Profit!
 
-You can now go to [the admin](http://127.0.0.1:8000/admin), and add a "motd
+You can now go to [your boite](http://127.0.0.1:8000/), and add a "motd
 app" for your *boite*.
 
 Make sure the message you added is displayed in the json displayed on the
