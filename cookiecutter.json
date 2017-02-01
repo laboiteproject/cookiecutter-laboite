@@ -4,5 +4,6 @@
     "app_model_name": "CamelCaseNoSpaces",
     "app_verbose_name": "Some verbose name",
     "author_name": "Your name",
-    "author_email": "Your email"
+    "author_email": "Your email",
+    "url": "URL of your website"
 }

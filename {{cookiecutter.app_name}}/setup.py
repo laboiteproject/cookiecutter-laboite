@@ -4,7 +4,7 @@ from __future__ import unicode_literals
 import os
 from setuptools import find_packages, setup
 
-with open(os.path.join(os.path.dirname(__file__), 'README.rst')) as readme:
+with open(os.path.join(os.path.dirname(__file__), 'README.md')) as readme:
     README = readme.read()
 
 # allow setup.py to be run from any path
@@ -18,7 +18,7 @@ setup(
     license='AGPL v3',
     description='{{cookiecutter.app_description}}',
     long_description=README,
-    url='https://www.laboite.cc/',
+    url='{{cookiecutter.url}}',
     author='{{cookiecutter.author_name}}',
     author_email='{{cookiecutter.author_email}}',
     namespace_packages=('laboite', 'laboite.apps',),

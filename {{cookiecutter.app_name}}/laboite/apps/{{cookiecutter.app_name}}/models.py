@@ -5,7 +5,6 @@ from django.utils.translation import ugettext_lazy as _
 from django.db import models
 
 from boites.models import App
-from app_{{cookiecutter.app_name}} import settings
 
 
 class App{{cookiecutter.app_model_name}}(App):

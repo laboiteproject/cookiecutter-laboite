@@ -21,6 +21,7 @@ You will get prompted to enter a few names:
 - `app_verbose_name [Some verbose name]: Message of the Day`
 - `author_name: John Doe`
 - `author_email: john@doe.com`
+- `url: http://www.johndoe.com`
 
 
 ### Edit your model
