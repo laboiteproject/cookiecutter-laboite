@@ -1,5 +1,8 @@
 {
     "app_name": "lowercase_no_spaces",
+    "app_description": "Description of your app",
     "app_model_name": "CamelCaseNoSpaces",
-    "app_verbose_name": "Some verbose name"
+    "app_verbose_name": "Some verbose name",
+    "author_name": "Your name",
+    "author_email": "Your email"
 }
