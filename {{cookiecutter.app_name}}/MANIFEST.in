@@ -1,0 +1,6 @@
+global-exclude *.py[co] __pycache__
+
+graft laboite
+
+include *.rst *.md
+
