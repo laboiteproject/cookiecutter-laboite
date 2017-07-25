@@ -8,7 +8,8 @@ pip install cookiecutter
 ```
 
 Let's create a "message of the day" app that will allow you to specify a
-message to display. Start by creating the files using cookiecutter:
+message to display. Start by going to `laboite/apps` folder, then create
+the files using cookiecutter:
 
 ```
 cookiecutter gh:laboiteproject/cookiecutter-laboite
@@ -19,14 +20,11 @@ You will get prompted to enter a few names:
 - `app_description: Message of the day app`
 - `app_model_name [CamelCaseNoSpaces]: MotD`
 - `app_verbose_name [Some verbose name]: Message of the Day`
-- `author_name: John Doe`
-- `author_email: john@doe.com`
-- `url: http://www.johndoe.com`
 
 
 ### Edit your model
 
-You can now edit the newly created `motd/laboite/apps/motd/models.py` file (we don't need to
+You can now edit the newly created `motd/models.py` file (we don't need to
 do any "updating", so we can skip the "only update any X minutes" part):
 
 ```python
@@ -41,21 +39,9 @@ class AppMotD(App):
         verbose_name_plural = _("Configurations : Message of the Day")
 ```
 
-### Install your app
-
-From the directory of your app, where `setup.py` resides run:
-
-```shell
-python setup.py install
-```
-or
-```shell
-pip install -e .
-```
-
 ### Add your new app to the settings
 
-Edit the `laboite/settings.py` file, and add your app name to the list of existing `INSTALLED_APPS`:
+Edit the `laboite/settings/base.py` file (or your own settings file), and add your app name to the list of existing `INSTALLED_APPS`:
 
 ```python
 LABOITE_APPS = [
@@ -73,7 +59,7 @@ LABOITE_APPS = [
     "laboite.apps.time",
     "laboite.apps.traffic",
     "laboite.apps.weather",
-    "laboite.apps.motd",  ## <---- make sure you add your app name to the list!
+    "laboite.apps.motd",  # <---- make sure you add your app name to the list!
 ]
 ```
 

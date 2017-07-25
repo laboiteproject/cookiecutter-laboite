@@ -1,0 +1,6 @@
+{% raw %}{% extends "boites/boite_app.html" %}
+
+{% load i18n %}{% endraw %}
+
+{{ '{% block app_icon %}' + cookiecutter.app_icon + '{% endblock %}' }}
+{{ '{% block app_description %}{% trans "' + cookiecutter.app_description + '" %}{% endblock %}' }}
